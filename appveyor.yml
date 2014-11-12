@@ -19,7 +19,8 @@ install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
   - ls c:\Ruby%ruby_version%\DevKit\mingw\bin
   - cp C:\Ruby%ruby_version%\DevKit\mingw\bin\bsdtar.exe C:\Ruby%ruby_version%\bin\tar.exe
-  - C:\Ruby%ruby_version%\bin\tar.exe --version
+  - ls c:\Ruby%ruby_version%\bin
+  - C:\Ruby%ruby_version%\DevKit\mingw\bin\tar.exe --version
   - tar.exe --version
   - ruby --version
   - gem --version
