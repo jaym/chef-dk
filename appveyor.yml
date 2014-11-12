@@ -19,6 +19,7 @@ install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
   - ls c:\Ruby%ruby_version%\DevKit\mingw\bin
   - SET PROG_TAR=C:\Ruby%ruby_version%\DevKit\mingw\bin\bsdtar.exe
+  - C:\Ruby%ruby_version%\DevKit\mingw\bin\bsdtar.exe --version
   - ruby --version
   - gem --version
   - gem install bundler --quiet --no-ri --no-rdoc
