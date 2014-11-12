@@ -20,7 +20,7 @@ install:
   - ls c:\Ruby%ruby_version%\DevKit\mingw\bin
   - cp C:\Ruby%ruby_version%\DevKit\mingw\bin\bsdtar.exe C:\Ruby%ruby_version%\bin\tar.exe
   - ls c:\Ruby%ruby_version%\bin
-  - C:\Ruby%ruby_version%\DevKit\mingw\bin\tar.exe --version
+  - C:\Ruby%ruby_version%\DevKit\mingw\bin\bsdtar.exe --version
   - tar.exe --version
   - ruby --version
   - gem --version
