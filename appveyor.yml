@@ -1,0 +1,22 @@
+version: {build}
+
+os: Windows Server 2012
+platform:
+  - x64
+
+clone_folder: c:\projects\chefdk
+clone_depth: 1
+skip_tags: true
+branches:
+  only:
+    - master
+
+install:
+  - ruby --version
+  - gem update --system --no-ri --no-rdoc
+
+build_script:
+  - bundle install
+
+test_script:
+  - bundle exec rspec
