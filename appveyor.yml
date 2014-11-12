@@ -17,7 +17,8 @@ branches:
 
 install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
-  - ls c:\Ruby%ruby_version%
+  - ls c:\Ruby%ruby_version%\DevKit
+  - cp C:\Ruby%ruby_version%\DevKit\mingw\bin\bsdtar.exe C:\Ruby%ruby_version%\bin
   - tar --version
   - ruby --version
   - gem --version
