@@ -17,6 +17,8 @@ branches:
 
 install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
+  - ls c:\Ruby%ruby_version%
+  - tar --version
   - ruby --version
   - gem --version
   - gem install bundler --quiet --no-ri --no-rdoc
