@@ -23,7 +23,10 @@ install:
   - bundler --version
 
 build_script:
-  - bundle install
+  - bundle install --path bundle/vendor
 
 test_script:
-  - bundle exec rspec
+  - bundle exec rspec --path bundle/vendor
+
+cache:
+  - vendor
