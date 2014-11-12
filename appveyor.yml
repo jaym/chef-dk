@@ -4,6 +4,10 @@ os: Windows Server 2012
 platform:
   - x64
 
+environment:
+  matrix:
+    -ruby_version: "200"
+
 clone_folder: c:\projects\chefdk
 clone_depth: 1
 skip_tags: true
@@ -12,8 +16,10 @@ branches:
     - master
 
 install:
+  - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
   - ruby --version
-  - gem update --system --no-ri --no-rdoc
+  - gem --version
+  - bundler --version
 
 build_script:
   - bundle install
