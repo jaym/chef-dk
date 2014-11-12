@@ -29,4 +29,4 @@ test_script:
   - bundle exec rspec --path bundle/vendor
 
 cache:
-  - vendor
+  - bundle
