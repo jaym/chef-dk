@@ -18,6 +18,9 @@ branches:
 install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
   - C:\Ruby%ruby_version%\DevKit\devkitvars.bat
+  - echo %PATH%
+  - C:\Ruby%ruby_version%\DevKit\dk.rb init
+  - C:\Ruby%ruby_version%\DevKit\dk.rb install
   - ruby --version
   - gem --version
   - gem install bundler --quiet --no-ri --no-rdoc
