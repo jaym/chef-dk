@@ -6,7 +6,7 @@ platform:
 
 environment:
   matrix:
-    - ruby_version: "21"
+    - ruby_version: "200"
 
 clone_folder: c:\projects\chefdk
 clone_depth: 1
@@ -17,10 +17,6 @@ branches:
 
 install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
-  - C:\Ruby%ruby_version%\DevKit\devkitvars.bat
-  - echo %PATH%
-  - ruby C:\Ruby%ruby_version%\DevKit\dk.rb init
-  - ruby C:\Ruby%ruby_version%\DevKit\dk.rb install
   - ruby --version
   - gem --version
   - gem install bundler --quiet --no-ri --no-rdoc
