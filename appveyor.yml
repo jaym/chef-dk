@@ -18,7 +18,7 @@ branches:
 install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
   - C:\Ruby%ruby_version%\DevKit\devkitvars.bat
-  - echo %PATH%
+  - rem %PATH%
   - C:\Ruby%ruby_version%\DevKit\dk.rb init
   - C:\Ruby%ruby_version%\DevKit\dk.rb install
   - ruby --version
