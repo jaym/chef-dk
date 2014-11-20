@@ -95,7 +95,7 @@ module ChefDK
         begin
           user_bin_dir = File.expand_path(File.join(Gem.user_dir, 'bin'))
           {
-            'PATH' => "#{omnibus_bin_dir}:#{user_bin_dir}:#{omnibus_embedded_bin_dir}:#{ENV['PATH']}",
+            'PATH' => [ omnibus_bin_dir, user_bin_dir, omnibus_embedded_bin_dir, ENV['PATH'] ].join(File::PATH_SEPARATOR),
             'GEM_ROOT' => Gem.default_dir.inspect,
             'GEM_HOME' => Gem.user_dir,
             'GEM_PATH' => Gem.path.join(':'),
@@ -103,5 +103,11 @@ module ChefDK
         end
     end
 
+    # Open a file. By default, the mode is for read+write,
+    # and binary so that windows writes out what we tell it,
+    # as this is the most common case we have.
+    def with_file(path, mode='wb+', &block)
+      File.open(path, mode, &block)
+    end
   end
 end
